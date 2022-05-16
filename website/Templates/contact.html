@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About.Saad Kass {% endblock %}
+{% block meta_description %} please contact us {% endblock %}
+{% block content %}
+
+
+  <div class="page-banner overlay-dark bg-image">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>    
+      
+        <h1 class="font-weight-normal">Contact</h1>
+
+
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
+
+</center>
+      <br></br>
+            <div class="container">
+              <div class="google-maps mb-100">
+                <iframe src=https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d98216.74321107377!2d-105.0189287!3d39.711042!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7eb955555555%3A0xd50080816f3924ab!2sWahl%20Dental%20Group!5e0!3m2!1sen!2sus!4v1651817001233!5m2!1sen!2sus" width="100%" height="600" frameborder="0"></iframe>
+                </div>
+                </div>
+       
+      
+
+  <div class="page-section">
+    <div class="container">
+      <center><h1 class="text-center wow fadeInUp">Get in Touch - {{ message_name }}
+      </h1>
+    
+      <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+      <form class="contact-form mt-5">
+        <div class="row mb-3">
+          <div class="col-sm-6 py-2 wow fadeInLeft">
+            <label for="fullName">Name</label>
+            <input type="text" name="message-name" class="form-control" placeholder="your name">
+          </div>
+          <div class="col-sm-6 py-2 wow fadeInRight">
+            <label for="emailAddress">Email</label>
+            <input type="email" name="message-email" class="form-control" placeholder="your email">
+          </div>
+          <div class="col-12 py-2 wow fadeInUp">
+          </div>
+          <div class="col-12 py-2 wow fadeInUp">
+            <label for="message">Message</label>
+            <textarea  name="message" class="form-control" rows="8" placeholder="your Message"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary wow zoomIn">Send Message</button>
+      </form>
+    </div>
+  </div>
+      
+{% endblock %}
+  

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About.Saad Kass {% endblock %}
+{% block meta_description %} please contact us {% endblock %}
+
+{% block content %}
+
+  <div class="page-banner overlay-dark bg-image" style="background-image: url({% static 'website/img/bg_image_1.jpg' %});">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>       
+      
+        
+        <h1>Review your information:</h1>
+
+         <p>{{your_name}}</p>
+         <p>{{your_email}}</p>
+         <p>{{your_date}}</p>
+         <p>{{your_departement}}</p>
+         <p>{{your_phone}}</p>
+         <p>{{your_message}}</p> 
+        
+        <h1 class="font-weight-normal">Set appointment</h1>
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
+     
+  <div class="maps-container wow fadeInUp">
+    <div id="google-maps"></div>
+  </div>
+  <div class="page-section banner-home bg-image" style="background-image: url({% static 'website/img/banner-pattern.svg' %});">
+    <div class="container py-5 py-lg-0">
+      <div class="row align-items-center">
+        <div class="col-lg-4 wow zoomIn">
+          <div class="img-banner d-none d-lg-block">
+            <img src="{% static 'website/img/mobile_app.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 wow fadeInRight">
+          <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
+          <a href="#"><img src="{% static 'website/img/google_play.svg'%}" alt=""></a>
+          <a href="#" class="ml-2"><img src="{% static 'website/img/app_store.svg' %}" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .banner-home -->
+{% endblock %}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
