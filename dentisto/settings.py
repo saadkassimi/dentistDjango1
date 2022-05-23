@@ -29,7 +29,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+
+    
+ 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -42,6 +49,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dentisto.urls'
+
+
+
 
 TEMPLATES = [
     {
@@ -114,12 +124,11 @@ STATICFILES_DIRS = [
 ]
 
 # Email settings
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
 EMAIL_HOST_USER = 'shadekassimi@gmail.com'
-EMAIL_HOST_PASSWORD =''
-EMAIL_USE_TLS = False
+EMAIL_HOST_PASSWORD ='etfvljsnbfrpvttq'
+EMAIL_USE_TLS = True
 #EMAIL_USE_SSL =False
 
 

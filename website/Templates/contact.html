@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} About.Saad Kass {% endblock %}
-{% block meta_description %} please contact us {% endblock %}
+{% block title %} Denver dental dentist contact us now  {% endblock %}
+{% block meta_description %} if you are still looking for more information then you can contact us through one of our preferred contact methods:Dentist@dentaldenvergroup.com {% endblock %}
 {% block content %}
 
 
@@ -10,7 +10,7 @@
       <div class="container text-center wow fadeInUp">
         <nav aria-label="Breadcrumb">
           <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Contact</li>
           </ol>
         </nav>    
@@ -21,20 +21,25 @@
       </div> <!-- .container -->
     </div> <!-- .banner-section -->
   </div> <!-- .page-banner -->
-
-</center>
+  <br></br>
+            {% if message_name %}
+            <center>
+              <h2>
+              Thanks {{ message_name }}!
+              <p><i>We received your email and will respond you shortly</i></p>
+              </h2>
+            </center>
       <br></br>
+            {% else %}
             <div class="container">
               <div class="google-maps mb-100">
                 <iframe src=https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d98216.74321107377!2d-105.0189287!3d39.711042!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7eb955555555%3A0xd50080816f3924ab!2sWahl%20Dental%20Group!5e0!3m2!1sen!2sus!4v1651817001233!5m2!1sen!2sus" width="100%" height="600" frameborder="0"></iframe>
                 </div>
-                </div>
-       
-      
+                </div>  
 
   <div class="page-section">
     <div class="container">
-      <center><h1 class="text-center wow fadeInUp">Get in Touch - {{ message_name }}
+      <center><h1 class="text-center wow fadeInUp">Get in Touch - 
       </h1>
     
       <form action="{% url 'contact' %}" method="POST">
@@ -60,6 +65,6 @@
       </form>
     </div>
   </div>
-      
+    {% endif %}   
 {% endblock %}
   
