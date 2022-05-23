@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+import django_heroku
+import dj_database_url
+from decouple import config
+
 
 
 
@@ -46,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'dentisto.urls'
@@ -123,6 +128,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Email settings
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -132,7 +139,7 @@ EMAIL_USE_TLS = True
 #EMAIL_USE_SSL =False
 
 
-
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
