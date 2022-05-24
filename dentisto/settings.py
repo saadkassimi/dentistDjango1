@@ -61,7 +61,7 @@ ROOT_URLCONF = 'dentisto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/template'],            
+        'DIRS': [],            
             
         'APP_DIRS': True,
         'OPTIONS': {
@@ -139,7 +139,7 @@ EMAIL_HOST_PASSWORD ='etfvljsnbfrpvttq'
 EMAIL_USE_TLS = True
 #EMAIL_USE_SSL =False
 
-
 django_heroku.settings(locals())
+
 
 
