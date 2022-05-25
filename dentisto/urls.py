@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from website.sitemap import StaticViewsSitemap
+from templates.sitemap import StaticViewsSitemap
 from django.contrib import sitemaps
 from website import models as website
 from django.contrib.sitemaps.views import sitemap
