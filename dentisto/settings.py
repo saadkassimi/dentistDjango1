@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-)7=ef!9ix*knl98)fxbudpc4kh(okp286v4-_%5vftueidkrjq
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dentaldenvergroup.com', 'www.dentaldenvergroup.com', 'dentaldentistgroup.herokup.com']
+ALLOWED_HOSTS = ['dentaldentistgroup.herokuapp.com', 'localhost', '127.0.0.1', 'dentaldenvergroup.com', 'www.dentaldenvergroup.com']
 
 
 # Application definition
