@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-)7=ef!9ix*knl98)fxbudpc4kh(okp286v4-_%5vftueidkrjq
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['dentaldentistgroup.herokuapp.com', 'localhost', '127.0.0.1', 'dentaldenvergroup.com', 'www.dentaldenvergroup.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dentaldentistgroup.herokuapp.com']
 
 
 # Application definition
@@ -132,9 +132,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-]
+)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
