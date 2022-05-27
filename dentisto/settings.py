@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-)7=ef!9ix*knl98)fxbudpc4kh(okp286v4-_%5vftueidkrjq
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1', 'dentaldentistgroup.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dentaldentistgroup.herokuapp.com', 'localhost', 'denverdentalgroup.com']
 
 
 # Application definition
@@ -128,7 +128,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = (BASE_DIR,'staticfiles'),
 
 STATIC_URL = '/static/'
 
@@ -148,5 +148,43 @@ EMAIL_USE_TLS = True
 
 django_heroku.settings(locals())
 
+# Django logger
+
+# Debugging in heroku live
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': ('%(asctime)s [%(process)d] [%(levelname)s] ' +
+                       'pathname=%(pathname)s lineno=%(lineno)s ' +
+                       'funcname=%(funcName)s %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        }
+    },
+    'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'logging.NullHandler',
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        'testlogger': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        }
+    }
+}
+
+DEBUG_PROPAGATE_EXCEPTIONS = True
+COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
 
