@@ -40,7 +40,7 @@ def locations(request):
 	return render(request, 'locations.html', {})
 
 def eastcolfaxavenue(request):
-	return render(request, 'east-colfax-avenue.html', {})
+	return render(request, 'East-colfax-avenue.html', {})
 
 def SouthBroadway(request):
 	return render(request, 'South-Broadway.html', {})
