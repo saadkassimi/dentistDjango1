@@ -39,7 +39,7 @@ def privacy(request):
 def locations(request):
 	return render(request, 'locations.html', {})
 
-def eastcolfaxavenue(request):
+def Eastcolfaxavenue(request):
 	return render(request, 'East-colfax-avenue.html', {})
 
 def SouthBroadway(request):

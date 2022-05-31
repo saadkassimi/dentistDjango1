@@ -3,7 +3,7 @@
  * Copyright 2013-2018 David Deutsch
  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
  */
-/**
+
  * Owl carousel
  * @version 2.3.4
  * @author Bartosz Wojciechowski
@@ -14,7 +14,7 @@
  * @todo itemsScaleUp
  * @todo Test Zepto
  * @todo stagePadding calculate wrong active classes
- */
+ 
 ;(function($, window, document, undefined) {
 
 	/**
