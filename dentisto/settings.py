@@ -84,13 +84,23 @@ WSGI_APPLICATION = 'dentisto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+ #DATABASES = {
+  #  'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#}
 
+DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'd1snlftafuug14',
+            'USER': 'sksaaekloxxpyl',
+            'PASSWORD': '327e533ee25ad4cd5eb3425feee9aff38252c7dcb8c84347f2fd6644edb3d7ea',
+            'HOST': 'ec2-34-201-95-176.compute-1.amazonaws.com',
+            'PORT': '5432',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
