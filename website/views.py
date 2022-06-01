@@ -467,6 +467,11 @@ def uadsi(request):
 
 def cookie(request):	
 	return render(request, 'Cookie-Policy.html', {})
+
+def sitemapnaviguation(request):	
+	return render(request, 'sitemap.html', {})	
+
+
 	
 																								
 def appointment(request):

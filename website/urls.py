@@ -140,4 +140,5 @@ urlpatterns = [
     path('locations/South-Gaylord-Street/services/dental-smile-imaging-technology', views.uajni, name="uajni"),
     path('locations/South-Gaylord-Street/services/general-dentistry', views.uadsi, name="uadsi"),
     path('Cookie-Policy', views.cookie, name="cookie"),
+    path('sitemap', views.sitemapnaviguation, name="sitemap"),
     ]
